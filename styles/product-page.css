@@ -1,0 +1,175 @@
+/* Reset and Global Styles */
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f4f8;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: #32a852;
+    font-size: 2em;
+}
+
+.filter-btn {
+    background-color: #32a852;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Product Container */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.product-card h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Track Button */
+.track-btn {
+    background-color: #32a852;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.track-btn:hover {
+    background-color: #27913c;
+}
+
+/* Filter Popup */
+.filter-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: none;
+    z-index: 10;
+}
+
+.filter-popup.active {
+    display: block;
+}
+
+.filter-popup h2 {
+    margin-bottom: 15px;
+    color: #32a852;
+}
+
+.filter-popup label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.filter-popup button {
+    background-color: #32a852;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.filter-popup button:hover {
+    background-color: #27913c;
+}
+
+/* Track Sales Popup */
+.track-sales-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    display: none;
+    z-index: 10;
+}
+
+.track-sales-popup.active {
+    display: block;
+}
+
+.track-sales-popup h2 {
+    color: #32a852;
+    margin-bottom: 15px;
+}
+
+.track-sales-popup p {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.track-sales-popup span {
+    font-weight: bold;
+    color: #32a852;
+}
+
+.track-sales-popup button {
+    background-color: #32a852;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.track-sales-popup button:hover {
+    background-color: #27913c;
+}

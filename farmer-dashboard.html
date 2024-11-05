@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Dashboard</title>
+    <link rel="stylesheet" href="styles/dashboard.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>Farmer Dashboard</h1>
+            <button class="logout-btn" onclick="window.location.href='index.html'">Logout</button>
+        </header>
+        
+        <div class="stats">
+            <div class="card">
+                <h2>Past Products Sold</h2>
+                <ul>
+                    <li>Wheat - 500kg - ₹15000</li>
+                    <li>Rice - 300kg - ₹30000</li>
+                    <li>Corn - 200kg - ₹20000</li>
+                </ul>
+                <button onclick="location.href='farmer-add-product.html'" class="add-product-btn">Add New Product</button>
+                <button onclick="location.href='view-products.html'" class="view-products-btn">View Products</button>
+            </div>
+            <div class="card">
+                <h2>Profit Prediction</h2>
+                <p>Estimated Monthly Profit: <strong>₹15000</strong></p>
+                <p>Yearly Growth Rate: <strong>12%</strong></p>
+            </div>
+            <div class="card">
+                <h2>Available Profit for Withdrawal</h2>
+                <p><strong>₹20000</strong></p>
+                <button>Withdraw Now</button>
+            </div>
+        </div>
+
+        <div class="extra-info">
+            <h2>Insights & Tips</h2>
+            <p>Market trends suggest an increase in demand for organic produce. Consider diversifying!</p>
+        </div>
+    </div>
+</body>
+</html>

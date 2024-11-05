@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freshgro - Product Page</title>
+    <link rel="stylesheet" href="styles/product-page.css">
+</head>
+<body>
+    <header>
+        <h1>Organic Products</h1>
+        <button class="filter-btn" onclick="toggleFilter()">Filter</button>
+    </header>
+
+    <div class="product-container">
+        <div class="product-card">
+            <img src="image/apple.png" alt="Organic Apples">
+            <h2>Organic Apples</h2>
+            <p><strong>Posted By:</strong> Farmer John</p>
+            <p><strong>Date Posted:</strong> October 29, 2024</p>
+            <p><strong>Price:</strong> ₹30/kg</p>
+            <button class="track-btn" onclick="trackSales(50, '₹1500')">Track Sales</button>
+        </div>
+
+        <div class="product-card">
+            <img src="image/carrot.png" alt="Fresh Carrots">
+            <h2>Fresh Carrots</h2>
+            <p><strong>Posted By:</strong> Farmer Mary</p>
+            <p><strong>Date Posted:</strong> October 28, 2024</p>
+            <p><strong>Price:</strong> ₹40/kg</p>
+            <button class="track-btn" onclick="trackSales(70, '₹2800')">Track Sales</button>
+        </div>
+
+        <div class="product-card">
+            <img src="image/broccoli.png" alt="Organic Broccoli">
+            <h2>Organic Broccoli</h2>
+            <p><strong>Posted By:</strong> Farmer Alex</p>
+            <p><strong>Date Posted:</strong> October 27, 2024</p>
+            <p><strong>Price:</strong> ₹60/kg</p>
+            <button class="track-btn" onclick="trackSales(40, '₹2400')">Track Sales</button>
+        </div>
+
+        <div class="product-card">
+            <img src="image/strawberry.png" alt="Strawberries">
+            <h2>Strawberries</h2>
+            <p><strong>Posted By:</strong> Farmer Sophie</p>
+            <p><strong>Date Posted:</strong> October 26, 2024</p>
+            <p><strong>Price:</strong> ₹30/kg</p>
+            <button class="track-btn" onclick="trackSales(60, '₹1800')">Track Sales</button>
+        </div>
+
+        <!-- Add more product cards similarly -->
+    </div>
+
+    <!-- Filter Popup -->
+    <div class="filter-popup" id="filterPopup">
+        <h2>Filter Options</h2>
+        <label>
+            <input type="checkbox" name="organic" id="organicFilter"> Organic Only
+        </label>
+        <label>
+            Sort by:
+            <select id="sortOptions">
+                <option value="date">Date Posted</option>
+                <option value="price">Price</option>
+                <option value="name">Farmer Name</option>
+            </select>
+        </label>
+        <button onclick="applyFilter()">Apply Filter</button>
+        <button onclick="toggleFilter()">Close</button>
+    </div>
+
+    <!-- Track Sales Popup -->
+    <div class="track-sales-popup" id="trackSalesPopup">
+        <h2>Sales Details</h2>
+        <p id="salesDetails"></p>
+        <button onclick="toggleTrackSales()">Close</button>
+    </div>
+
+    <script>
+        function toggleFilter() {
+            document.getElementById("filterPopup").classList.toggle("active");
+        }
+        
+        function applyFilter() {
+            alert("Filter applied!");
+        }
+
+        function trackSales(unitsSold, revenue) {
+            const details = `
+                <span>Sales Volume:</span> ${unitsSold} units<br>
+                <span>Total Revenue:</span> ${revenue}
+            `;
+            document.getElementById("salesDetails").innerHTML = details;
+            toggleTrackSales();
+        }
+
+        function toggleTrackSales() {
+            document.getElementById("trackSalesPopup").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
+

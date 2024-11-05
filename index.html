@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Freshgro - Farm Fresh Produce</title>
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="icon" href="image/logo3.png" type="image/png">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <a href="#">
+          <img src="image/logo1.jpg" alt="Freshgro Logo" class="logo-image"> Freshgro
+        </a>
+      </div>
+
+      <nav class="navbar">
+        <a href="#home">Home</a>
+       
+        <a href="#why-choose-us">Why Choose Us</a>
+        <a href="#our-farmers">Our Farmers</a>
+        <a href="#contact">Contact</a>
+        <a href="farmer-login.html">Farmer Login</a>
+        <a href="consumer-login.html">Consumer Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Landscape Gallery Slider</title>
+      <style>
+          /* Keep existing styles for the header */
+  
+          /* Slider styles */
+          .slider-section {
+              margin: 0; /* Remove top and bottom margins */
+              padding: 10px 0; /* Equalize padding above and below */
+              background-color: #f5f5f5;
+              text-align: center;
+              overflow: hidden; /* Remove empty space on sides */
+          }
+  
+          .slider {
+              position: relative;
+              width: 100vw; /* Full screen width */
+              height: 80vh; /* Reduced height to 80% of the viewport height */
+              overflow: hidden;
+          }
+  
+          .slide {
+              display: none;
+              width: 100%;
+              height: 100%;
+              transition: opacity 1s ease;
+          }
+  
+          .slide img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover; /* Make image cover the entire container */
+              display: block;
+          }
+  
+          /* Show the first slide initially */
+          .slide:first-child {
+              display: block;
+              opacity: 1;
+          }
+      </style>
+  </head>
+  <body>
+      <!-- Replace this header with the header code from your site -->
+  
+      <!-- Landscape Slider Section -->
+      <section class="slider-section">
+          <div class="slider">
+              <div class="slide">
+                  <img src="image/landscape21.jpg" alt="Landscape 1">
+              </div>
+              <div class="slide">
+                  <img src="image/landcape10.jpg" alt="Landscape 2">
+              </div>
+              <div class="slide">
+                  <img src="image/landscape3.jpg" alt="Landscape 3">
+              </div>
+              <div class="slide">
+                  <img src="image/landscape13.jpg" alt="Landscape 4">
+              </div>
+              <!-- Add more slides as needed -->
+          </div>
+      </section>
+  
+      <script>
+          let currentIndex = 0;
+          const slides = document.querySelectorAll(".slide");
+          const totalSlides = slides.length;
+  
+          function showSlide(index) {
+              slides.forEach((slide, i) => {
+                  slide.style.display = "none";
+                  slide.style.opacity = "0";
+              });
+              slides[index].style.display = "block";
+              setTimeout(() => {
+                  slides[index].style.opacity = "1";
+              }, 10);
+          }
+  
+          function nextSlide() {
+              currentIndex = (currentIndex + 1) % totalSlides;
+              showSlide(currentIndex);
+          }
+  
+          showSlide(currentIndex);
+          setInterval(nextSlide, 3000);
+      </script>
+  </body>
+  </html>
+  
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Direct from Farm to Your Table</h1>
+      <p>Support local farmers and get fresh product delivered directly to your home.</p>
+      <a href="products.html" class="cta-button" id="shopButton">Shop Fresh Product</a>
+    </div>
+  </section>
+
+  <!-- Why Choose Us Section -->
+  <section id="why-choose-us" class="why-choose-us">
+    <h2>Why Choose Freshgro?</h2>
+    <div class="benefits-container">
+      <div class="benefit-item">
+        <img src="image/fresh.png" alt="Freshness Icon">
+        <h3>Guaranteed Freshness</h3>
+        <p>Our produce is sourced directly from local farmers, ensuring peak freshness and quality.</p>
+      </div>
+      <div class="benefit-item">
+        <img src="image/farmers.png" alt="Community Icon">
+        <h3>Support Local Farmers</h3>
+        <p>Every purchase supports local farmers, helping to strengthen our community.</p>
+      </div>
+      <div class="benefit-item">
+        <img src="image/recycle-sign.png" alt="Sustainability Icon">
+        <h3>Eco-Friendly Practices</h3>
+        <p>We prioritize sustainable practices to help protect the environment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Farmers Section -->
+  <section id="our-farmers" class="our-farmers">
+    <h2>Meet Our Top Farmers</h2>
+    <div class="farmers-container">
+      <div class="farmer-card">
+        <img src="image/farmer1.jpg" alt="Farmer 1">
+        <h3>John Doe</h3>
+        <p>Specializes in organic vegetables.</p>
+      </div>
+      <div class="farmer-card">
+        <img src="image/farmer 2.jpg" alt="Farmer 2">
+        <h3>Jane Smith</h3>
+        <p>Known for sustainable dairy farming.</p>
+      </div>
+      <div class="farmer-card">
+        <img src="image/farmer3.jpg" alt="Farmer 3">
+        <h3>Samuel Green</h3>
+        <p>Produces premium quality fruits.</p>
+      </div>
+    </div>
+  </section>
+
+<!-- Top Products Section -->
+<section id="top-products" class="top-products">
+  <h2>Top Products</h2>
+  <div class="product-grid">
+    <!-- Product Card 1 -->
+    <div class="product-card">
+      <img src="image/apple1.jpg" alt="Product 1">
+      <h3>Organic Apples</h3>
+      <p>From ₹100.00</p>
+    </div>
+    <!-- Product Card 2 -->
+    <div class="product-card">
+      <img src="image/carrot2.jpg" alt="Product 2">
+      <h3>Fresh Carrots</h3>
+      <p>From ₹50.00</p>
+    </div>
+    <!-- Product Card 3 -->
+    <div class="product-card">
+      <img src="image/egg1.jpg" alt="Product 3">
+      <h3>Farm Eggs</h3>
+      <p>From ₹80.00</p>
+    </div>
+    <!-- Product Card 4 -->
+    <div class="product-card">
+      <img src="image/milk1.jpg" alt="Product 4">
+      <h3>Organic Milk</h3>
+      <p>From ₹60.00</p>
+    </div>
+  </div>
+</section>
+
+<!-- CSS Styling for Top Products Grid -->
+<style>
+  /* Top Products Section Styling */
+  .top-products {
+    padding: 50px;
+    text-align: center;
+    background-color: #e6f2e6; /* Light greenish background */
+  }
+
+  .top-products h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #2f4f4f; /* Darker green for the heading */
+  }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for 4 products */
+    gap: 20px; /* Space between each product card */
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .product-card {
+    background: linear-gradient(135deg, #a8d5ba, #77c593); /* Greenish gradient */
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+  }
+
+  .product-card img {
+    width: 200px;
+    height: 200px; /* Fixed height for consistent image size */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+
+  .product-card h3 {
+    margin: 15px 0;
+    font-size: 1.3em;
+  }
+
+  .product-card p {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+</style>
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+  <h2>Contact Us</h2>
+  <p>We'd love to hear from you! Whether you're a consumer or a farmer, feel free to reach out for any queries.</p>
+  
+  <div class="contact-content">
+    <!-- Form Section -->
+    <form action="contact-form-handler.html" method="POST" class="contact-form">
+      <div class="form-group">
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <textarea name="message" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit" class="submit-button">Send Message</button>
+    </form>
+
+    <!-- Contact Information Section -->
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Hindustan University,Padur,Kelambakkam</p>
+      <p><i class="fas fa-phone"></i> +91 7695-818446</p>
+      <p><i class="fas fa-envelope"></i> support@freshgro.com</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Font Awesome for Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<!-- CSS Styling and Animations for Enhanced Contact Section -->
+<style>
+  /* Contact Section Styling */
+  .contact {
+    background-color: #f1f8f4;
+    padding: 60px 20px;
+    text-align: center;
+    color: #355e3b;
+  }
+
+  .contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-in-out;
+  }
+
+  .contact p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+  }
+
+  .contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  /* Contact Form Styling */
+  .contact-form {
+    flex: 1;
+    max-width: 500px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #b5e3c1;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+  }
+
+  .contact-form input[type="text"]:focus,
+  .contact-form input[type="email"]:focus,
+  .contact-form textarea:focus {
+    box-shadow: 0 0 8px rgba(53, 94, 59, 0.3);
+  }
+
+  .contact-form textarea {
+    resize: vertical;
+    height: 120px;
+  }
+
+  .submit-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #355e3b;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    animation: fadeInUp 1s ease-in-out;
+  }
+
+  .submit-button:hover {
+    background-color: #2b4d32;
+  }
+
+  /* Contact Info Styling */
+  .contact-info {
+    flex: 1;
+    max-width: 400px;
+    background-color: #b5e3c1;
+    padding: 20px;
+    border-radius: 10px;
+    color: #355e3b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    animation: fadeInLeft 1s ease-in-out;
+  }
+
+  .contact-info h3 {
+    margin-bottom: 15px;
+    font-size: 1.8em;
+  }
+
+  .contact-info p {
+    margin: 10px 0;
+    font-size: 1.1em;
+  }
+
+  .social-icons {
+    margin-top: 20px;
+  }
+
+  .social-icons a {
+    color: #355e3b;
+    font-size: 1.5em;
+    margin-right: 15px;
+    transition: color 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #2b4d32;
+  }
+
+  /* Animations */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeInLeft {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+</style>
+
+  <!-- Pop-up Modal -->
+  <div id="loginPromptModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <p>Kindly login to purchase</p>
+    </div>
+  </div>
+
+<!-- Footer Section -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- About Freshgro -->
+    <div class="footer-about">
+      <h3>About Freshgro</h3>
+      <p>Connecting farmers directly with consumers to bring fresh, organic produce straight from the farm to your table. Support local farmers and enjoy the freshest ingredients.</p>
+    </div>
+    
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#why-choose-us">Why Choose Us</a></li>
+        <li><a href="#our-farmers">Our Farmers</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Social Media Links -->
+    <div class="footer-social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- Newsletter Subscription -->
+    <div class="footer-newsletter">
+      <h3>Subscribe to Our Newsletter</h3>
+      <p>Get updates on fresh produce, exclusive deals, and more.</p>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    
+  </div>
+</footer>
+
+<!-- Font Awesome for Social Media Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<!-- CSS Styling for Enhanced Footer -->
+<style>
+  /* Footer Styling */
+  .footer {
+    background-color: #355e3b; /* Dark green background */
+    color: #ffffff;
+    padding: 40px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal sections */
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  .footer h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .footer-about, .footer-links, .footer-social, .footer-newsletter {
+    padding: 10px;
+  }
+
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .footer-links ul li {
+    margin: 5px 0;
+  }
+
+  .footer-links ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-links ul li a:hover {
+    color: #b5e3c1; /* Lighter green */
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .social-icons a {
+    color: #ffffff;
+    font-size: 1.2em;
+    transition: color 0.3s;
+  }
+
+  .social-icons a:hover {
+    color: #b5e3c1; /* Lighter green */
+  }
+
+  .footer-newsletter p {
+    margin: 5px 0;
+  }
+
+  .newsletter-form {
+    display: flex;
+    gap: 10px;
+  }
+
+  .newsletter-form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+  }
+
+  .newsletter-form button {
+    padding: 10px 15px;
+    background-color: #b5e3c1; /* Light green button */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #355e3b; /* Dark green text */
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+
+  .newsletter-form button:hover {
+    background-color: #ffffff;
+    color: #355e3b;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding: 15px 0;
+    border-top: 1px solid #ffffff;
+    width: 100%;
+    margin-top: 20px;
+  }
+</style>
+
+
+  <!-- JavaScript -->
+  <script>
+    // Get modal and button elements
+    const shopButton = document.getElementById("shopButton");
+    const loginPromptModal = document.getElementById("loginPromptModal");
+    const closeBtn = document.querySelector(".close-btn");
+
+    // Show modal on button click
+    shopButton.onclick = function(event) {
+      event.preventDefault(); // Prevent immediate navigation
+      loginPromptModal.style.display = "block";
+    }
+
+    // Close modal on close button click
+    closeBtn.onclick = function() {
+      loginPromptModal.style.display = "none";
+      // Redirect to products page after showing the message
+      window.location.href = "products.html"; // Adjust to the actual page URL
+    }
+
+    // Close modal if clicking outside of it
+    window.onclick = function(event) {
+      if (event.target == loginPromptModal) {
+        loginPromptModal.style.display = "none";
+      }
+    }
+  </script>
+
+  <!-- Add the CSS styles for the modal -->
+  <style>
+    /* Modal styling */
+    /* Modal styling */
+    /* Modal styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  animation: fadeIn 0.3s ease-in-out; /* Animation for smooth appearance */
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  border-radius: 10px; /* Rounded corners */
+  position: relative;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow */
+  animation: scaleUp 0.3s ease-in-out; /* Scale-up effect for entry */
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #aaa;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s; /* Smooth color change */
+}
+
+.close-btn:hover {
+  color: #ff5c5c; /* Slight color change on hover for close button */
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+  from { background-color: rgba(0, 0, 0, 0); }
+  to { background-color: rgba(0, 0, 0, 0.5); }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+ 
+  </style>
+</body>
+</html>
+
+
+

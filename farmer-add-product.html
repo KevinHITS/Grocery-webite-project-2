@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a New Product</title>
+    <link rel="stylesheet" href="styles/farmer-add-product.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Add a New Product</h2>
+        <form>
+            <div class="form-group">
+                <label for="productName">Product Name</label>
+                <input type="text" id="productName" placeholder="Enter product name">
+            </div>
+            <div class="form-group">
+                <label for="productPrice">Price (per kg)</label>
+                <input type="number" id="productPrice" placeholder="Enter price">
+            </div>
+            <div class="form-group">
+                <label for="productDescription">Description</label>
+                <textarea id="productDescription" placeholder="Enter product description"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="productImage">Upload Image</label>
+                <input type="file" id="productImage" accept="image/*">
+            </div>
+            <button type="submit" class="submit-btn">Add Product</button>
+        </form>
+    </div>
+</body>
+</html>

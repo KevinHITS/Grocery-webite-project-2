@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consumer Login - Freshgro</title>
+  
+  <link rel="stylesheet" href="styles/index.css">
+  <link rel="stylesheet" href="styles/consumer-login.css">
+</head>
+
+<body>
+  <div class="consumer-login">
+    <div class="login-container">
+      <h2>Consumer Login</h2>
+      <form id="consumer-login-form">
+        <input type="text" placeholder="Username" required>
+        <input type="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+      <button id="select-location-btn">Select Location</button>
+    </div>
+  </div>
+
+  <!-- Location Selection Popup -->
+  <div id="location-popup" class="popup">
+    <div class="popup-content">
+      <h3>Select Delivery Location</h3>
+      <label for="country">Country:</label>
+      <select id="country">
+        <option value="India">India</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+      </select>
+
+      <label for="state">State:</label>
+      <select id="state">
+        <option value="Tamil Nadu">Tamil Nadu</option>
+        <option value="Maharashtra">Maharashtra</option>
+        <option value="Gujarat">Gujarat</option>
+      </select>
+
+      <label for="district">District:</label>
+      <select id="district">
+        <option value="Chennai">Chennai</option>
+        <option value="Mumbai">Mumbai</option>
+        <option value="Ahmedabad">Ahmedabad</option>
+      </select>
+
+      <label for="address">Address of Delivery:</label>
+      <input type="text" id="address" placeholder="Enter detailed address" required>
+
+      <button id="confirm-location-btn">Confirm Changes</button>
+    </div>
+  </div>
+
+  <script>
+    // Show popup
+    document.getElementById('select-location-btn').addEventListener('click', () => {
+      document.getElementById('location-popup').style.display = 'flex';
+    });
+
+    // Close popup on confirmation
+    document.getElementById('confirm-location-btn').addEventListener('click', () => {
+      document.getElementById('location-popup').style.display = 'none';
+    });
+
+    // Login redirection
+    document.getElementById('consumer-login-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      window.location.href = 'products.html';
+    });
+  </script>
+
+  <style>
+    /* Popup styles */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup-content {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      width: 90%;
+      max-width: 400px;
+    }
+
+    .popup-content h3 {
+      color: #32a852;
+      margin-bottom: 10px;
+    }
+
+    .popup-content label {
+      display: block;
+      margin: 10px 0 5px;
+      color: #555;
+    }
+
+    .popup-content select,
+    .popup-content input[type="text"],
+    .popup-content button {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #c0d1c6;
+      border-radius: 8px;
+      font-size: 1em;
+    }
+
+    .popup-content button {
+      background-color: #32a852;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+
+    .popup-content button:hover {
+      background-color: #28a745;
+      transform: translateY(-2px);
+    }
+  </style>
+</body>
+</html>
+
+
